@@ -31,6 +31,116 @@ A detailed table showing individual loan records including loan purpose, home ow
 The Power BI data model showing relationships between the main loan dataset and the date table used for time-based analysis and filtering.
 
 ---
+## SQL Analysis Examples
+
+Below are some key SQL queries used to analyze the bank loan dataset.
+
+---
+
+### 1. Total Loan Applications
+
+```sql
+SELECT COUNT(id) AS Total_Loan_Applications
+FROM Bank_loan_data;
+```
+
+This query calculates the total number of loan applications received.
+
+---
+
+### 2. Total Funded Loan Amount
+
+```sql
+SELECT SUM(loan_amount) AS Total_Funded_Amount
+FROM Bank_loan_data;
+```
+
+This query calculates the total amount funded across all loans.
+
+---
+
+### 3. Good Loans vs Bad Loans
+
+```sql
+SELECT 
+    CASE 
+        WHEN loan_status = 'Fully Paid' OR loan_status = 'Current' THEN 'Good Loan'
+        ELSE 'Bad Loan'
+    END AS Loan_Category,
+    COUNT(*) AS Total_Loans
+FROM Bank_loan_data
+GROUP BY Loan_Category;
+```
+
+This query classifies loans into Good Loans and Bad Loans using conditional logic.
+
+---
+
+### 4. Monthly Loan Applications Trend
+
+```sql
+SELECT 
+    DATENAME(MONTH, issue_date) AS Month_Name,
+    COUNT(id) AS Loan_Applications
+FROM Bank_loan_data
+GROUP BY DATENAME(MONTH, issue_date)
+ORDER BY Loan_Applications DESC;
+```
+
+This query analyzes loan application trends by month.
+
+---
+
+### 5. Average Interest Rate by Loan Grade
+
+```sql
+SELECT 
+    grade,
+    ROUND(AVG(int_rate) * 100, 2) AS Avg_Interest_Rate
+FROM Bank_loan_data
+GROUP BY grade
+ORDER BY Avg_Interest_Rate DESC;
+```
+
+This query calculates the average interest rate for each loan grade.
+
+---
+
+### 6. Top States by Loan Applications
+
+```sql
+SELECT 
+    address_state,
+    COUNT(id) AS Total_Loans
+FROM Bank_loan_data
+GROUP BY address_state
+ORDER BY Total_Loans DESC;
+```
+
+This query identifies which states have the highest number of loan applications.
+
+---
+
+### 7. Loan Status Distribution
+
+```sql
+SELECT 
+    loan_status,
+    COUNT(*) AS Loan_Count
+FROM Bank_loan_data
+GROUP BY loan_status
+ORDER BY Loan_Count DESC;
+```
+
+This query shows the distribution of loans across different loan statuses.
+
+---
+
+More SQL queries used in this project are available in the file:
+
+**sql_queries.sql**
+
+---
 
 ## Tools & Technologies
 
