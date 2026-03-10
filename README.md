@@ -8,6 +8,17 @@ The goal of this analysis is to understand loan performance, identify risk patte
 The dashboard provides insights into loan applications, funded amounts, repayments, interest rates, and loan risk classification.
 
 ---
+## Dashboard Preview
+
+![Dashboard Overview](screenshot/dashboard_overview.png)
+
+![Loan Summary](screenshot/loan_summary.png)
+
+![Loan Details](screenshot/loan_details_table.png)
+
+![Data Model](screenshot/data_model.png)
+
+---
 
 ## Tools & Technologies
 
