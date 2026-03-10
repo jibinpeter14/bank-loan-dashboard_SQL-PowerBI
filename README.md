@@ -1,4 +1,8 @@
 # Bank Loan Analysis (SQL + Power BI)
+![SQL](https://img.shields.io/badge/SQL-Database-blue)
+![Power BI](https://img.shields.io/badge/PowerBI-Visualization-yellow)
+![Data Analytics](https://img.shields.io/badge/Data-Analytics-green)
+This project analyzes bank loan performance using SQL and Power BI to identify lending patterns, borrower risk behavior, and loan portfolio performance.
 
 ## Project Overview
 This project analyzes bank loan performance using SQL for data exploration and Power BI for interactive data visualization.
@@ -15,10 +19,16 @@ Main Dashboard Overview
 This dashboard displays high-level KPIs such as total loan applications, total funded amount, total amount received, average interest rate, and average debt-to-income ratio. It also includes breakdowns by state, loan term, home ownership, employment length, and loan purpose.
 
 ![Loan Summary](screenshot/loan_summary.png)
+Loan Performance Summary
+This section highlights the distribution between Good Loans and Bad Loans, allowing analysts to quickly evaluate portfolio health and risk exposure.
 
 ![Loan Details](screenshot/loan_details_table.png)
+Loan Details Table
+A detailed table showing individual loan records including loan purpose, home ownership status, loan grade, installment amount, total payment received, and loan status.
 
 ![Data Model](screenshot/data_model.png)
+Data Model
+The Power BI data model showing relationships between the main loan dataset and the date table used for time-based analysis and filtering.
 
 ---
 
