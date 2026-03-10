@@ -15,7 +15,7 @@ The dashboard provides insights into loan applications, funded amounts, repaymen
 ## Dashboard Preview
 
 ![Dashboard Overview](screenshot/dashboard_overview.png)
-Main Dashboard Overview
+**Main Dashboard Overview**
 This dashboard displays high-level KPIs such as total loan applications, total funded amount, total amount received, average interest rate, and average debt-to-income ratio. It also includes breakdowns by state, loan term, home ownership, employment length, and loan purpose.
 
 ![Loan Summary](screenshot/loan_summary.png)
